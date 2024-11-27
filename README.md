@@ -6,11 +6,6 @@ The code is developed and tested under the following environment
 * PyTorch 1.7.1
 * CUDA 11.0
 
-You can create the environment:
-```bash
-conda env create -f poseformer.yml
-```
-
 ### Dataset
 
 Our code is compatible with the dataset setup introduced by [Martinez et al.](https://github.com/una-dinosauria/3d-pose-baseline) and [Pavllo et al.](https://github.com/facebookresearch/VideoPose3D). Please refer to [VideoPose3D](https://github.com/facebookresearch/VideoPose3D) to set up the Human3.6M dataset  (./data directory). 
@@ -50,9 +45,9 @@ python run_poseformer.py -k gt -f 81 -lr 0.0004 -lrd 0.99
 
 ### Visualization and other functions
 
-We keep our code consistent with [VideoPose3D](https://github.com/facebookresearch/VideoPose3D). Please refer to their project page for further information. 
+We keep our code consistent with [VideoPose3D](https://github.com/facebookresearch/VideoPose3D),[PoseFormer](https://github.com/zczcwh/PoseFormer). Please refer to their project page for further information. 
 
 
 ## Acknowledgement
 
-Part of our code is borrowed from [VideoPose3D](https://github.com/facebookresearch/VideoPose3D). We thank the authors for releasing the codes.
+Part of our code is borrowed from [VideoPose3D](https://github.com/facebookresearch/VideoPose3D),[PoseFormer](https://github.com/zczcwh/PoseFormer). We thank the authors for releasing the codes.

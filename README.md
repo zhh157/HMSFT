@@ -5,9 +5,9 @@ The current state of the manuscript is under review. If the article is accepted,
 
 The code is developed and tested under the following environment
 
-* Python 3.8.2
-* PyTorch 1.7.1
-* CUDA 11.0
+* Python 3.8
+* PyTorch 2.3.1
+* CUDA 12.2
 
 ### Dataset
 

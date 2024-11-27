@@ -18,7 +18,7 @@ Our code is compatible with the dataset setup introduced by [Martinez et al.](ht
 We provide the pre-trained 81-frame model (CPN detected 2D pose as input) [here](https://drive.google.com/file/d/1oX5H5QpVoFzyD-Qz9aaP3RDWDb1v1sIy/view?usp=sharing). To evaluate it, put it into the `./checkpoint` directory and run:
 
 ```bash
-python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate detected81f.bin
+python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate cpn81f.bin
 ```
 
 We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here](https://drive.google.com/file/d/18wW4TdNYxF-zdt9oInmwQK9hEdRJnXzu/view?usp=sharing). To evaluate it, put it into the `./checkpoint` directory and run:
@@ -33,18 +33,18 @@ python run_poseformer.py -k gt -f 81 -c checkpoint --evaluate gt81f.bin
 * To train a model from scratch (CPN detected 2D pose as input), run:
 
 ```bash
-python run_poseformer.py -k cpn_ft_h36m_dbb -f 27 -lr 0.00004 -lrd 0.99
+python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -lr 0.0002 -lrd 0.98
 ```
 
-`-f` controls how many frames are used as input. 27 frames achieves 47.0 mm, 81 frames achieves achieves 44.3 mm. 
+`-f` controls how many frames are used as input. 81 frames achieves achieves 43.0 mm. 
 
 * To train a model from scratch (Ground truth 2D pose as input), run:
 
 ```bash
-python run_poseformer.py -k gt -f 81 -lr 0.0004 -lrd 0.99
+python run_poseformer.py -k gt -f 81 -lr 0.0002 -lrd 0.99
 ```
 
-81 frames achieves 31.3 mm (MPJPE). 
+81 frames achieves 27.9 mm (MPJPE). 
 
 ### Visualization and other functions
 

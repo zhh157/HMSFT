@@ -1,5 +1,5 @@
-### Status
-The current status of the manuscript is under review. If the article is accepted, we will publish the full code and pre-trained model.
+### State
+The current state of the manuscript is under review. If the article is accepted, we will publish the full code and pre-trained model.
 
 ### Environment
 

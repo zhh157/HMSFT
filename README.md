@@ -45,9 +45,9 @@ python run_poseformer.py -k gt -f 81 -lr 0.0004 -lrd 0.99
 
 ### Visualization and other functions
 
-We keep our code consistent with [VideoPose3D](https://github.com/facebookresearch/VideoPose3D),[PoseFormer](https://github.com/zczcwh/PoseFormer). Please refer to their project page for further information. 
+We keep our code consistent with [VideoPose3D](https://github.com/facebookresearch/VideoPose3D), [PoseFormer](https://github.com/zczcwh/PoseFormer). Please refer to their project page for further information. 
 
 
 ## Acknowledgement
 
-Part of our code is borrowed from [VideoPose3D](https://github.com/facebookresearch/VideoPose3D),[PoseFormer](https://github.com/zczcwh/PoseFormer). We thank the authors for releasing the codes.
+Part of our code is borrowed from [VideoPose3D](https://github.com/facebookresearch/VideoPose3D), [PoseFormer](https://github.com/zczcwh/PoseFormer). We thank the authors for releasing the codes.

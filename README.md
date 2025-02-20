@@ -24,7 +24,7 @@ Our code is compatible with the dataset setup introduced by [Martinez et al.](ht
 
 ### Evaluating pre-trained models
 
-We provide the pre-trained 81-frame model (CPN detected 2D pose as input) [here](https://drive.google.com/file/d/1oX5H5QpVoFzyD-Qz9aaP3RDWDb1v1sIy/view?usp=sharing). To evaluate it, put it into the `./checkpoint` directory and run:
+We provide the pre-trained 81-frame model (CPN detected 2D pose as input) [here](https://pan.baidu.com/s/1iQeJqX8gq0kHpnFKOijatQ?pwd=1234). To evaluate it, put it into the `./checkpoint` directory and run:
 
 ```bash
 python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate cpn81f.bin
@@ -32,7 +32,7 @@ python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate cpn81
 `-f` controls how many frames are used as input. After 5 runs, the 81-frame model achieves achieves 43.0 $\pm$ 0.12 mm (MPJPE) and 31.9 $\pm$ 0.09 mm (P-MPJPE). 
 
 
-We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here](https://drive.google.com/file/d/18wW4TdNYxF-zdt9oInmwQK9hEdRJnXzu/view?usp=sharing). To evaluate it, put it into the `./checkpoint` directory and run:
+We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here](https://pan.baidu.com/s/1iQeJqX8gq0kHpnFKOijatQ?pwd=1234). To evaluate it, put it into the `./checkpoint` directory and run:
 
 ```bash
 python run_poseformer.py -k gt -f 81 -c checkpoint --evaluate gt81f.bin

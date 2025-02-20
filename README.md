@@ -1,6 +1,3 @@
-### State
-The current state of the manuscript is under review. If the manuscript is accepted, we will release all the code and pre-trained models.
-
 ### Environment
 
 The code is developed and tested under the following environment
@@ -8,6 +5,18 @@ The code is developed and tested under the following environment
 * Python 3.8
 * PyTorch 2.3.1
 * CUDA 12.2
+* GPU two RTX3090
+
+### Training configurations
+
+|hyper-parameters | Human3.6M | HumanEva-I | MPI-INF-3DHP |
+|:----------:|:----------:|:----------:|:----------:|
+|Initial learning rate | 2e-4 |  1e-3 |  4e-4 | 
+| Weight decay | 0.98 | 0.99 | 0.98 |
+|Optimizer | AdamW | AdamW | AdamW |
+|Training epochs | 30 |  500|  100|
+|Time per epoch| 3.5h | 3m | 3.5m|
+
 
 ### Dataset
 
@@ -20,12 +29,14 @@ We provide the pre-trained 81-frame model (CPN detected 2D pose as input) [here]
 ```bash
 python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate cpn81f.bin
 ```
+`-f` controls how many frames are used as input. 81 frames achieves achieves 43.0$\pm$0.12 mm (MPJPE) and 31.9$\pm$0.09 mm (P-MPJPE). 
 
 We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here](https://drive.google.com/file/d/18wW4TdNYxF-zdt9oInmwQK9hEdRJnXzu/view?usp=sharing). To evaluate it, put it into the `./checkpoint` directory and run:
 
 ```bash
 python run_poseformer.py -k gt -f 81 -c checkpoint --evaluate gt81f.bin
 ```
+81 frames achieves 27.9 mm (MPJPE). 
 
 
 ### Training new models
@@ -36,7 +47,6 @@ python run_poseformer.py -k gt -f 81 -c checkpoint --evaluate gt81f.bin
 python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -lr 0.0002 -lrd 0.98
 ```
 
-`-f` controls how many frames are used as input. 81 frames achieves achieves 43.0 mm. 
 
 * To train a model from scratch (Ground truth 2D pose as input), run:
 
@@ -44,7 +54,6 @@ python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -lr 0.0002 -lrd 0.98
 python run_poseformer.py -k gt -f 81 -lr 0.0002 -lrd 0.99
 ```
 
-81 frames achieves 27.9 mm (MPJPE). 
 
 ### Visualization and other functions
 

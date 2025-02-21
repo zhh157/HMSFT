@@ -28,7 +28,7 @@ We provide the pre-trained 81-frame model (CPN detected 2D pose as input) [here]
 ```bash
 python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate cpn81f.bin
 ```
-`-f` controls how many frames are used as input. After 5 runs, the 81-frame model achieves achieves 43.08 $\pm$ 0.08 mm (MPJPE). 
+`-f` controls how many frames are used as input. After 5 runs, the 81-frame model achieves achieves **43.08 $\pm$ 0.08 mm (MPJPE)**. 
 
 
 We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here](https://pan.baidu.com/s/1iQeJqX8gq0kHpnFKOijatQ?pwd=1234). To evaluate it, put it into the `./checkpoint` directory and run:
@@ -36,7 +36,7 @@ We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here
 ```bash
 python run_poseformer.py -k gt -f 81 -c checkpoint --evaluate gt81f.bin
 ```
-After 5 runs, the 81-frame model achieves 27.94 $\pm$ 0.05 mm (MPJPE). 
+After 5 runs, the 81-frame model achieves **27.94 $\pm$ 0.05 mm (MPJPE)**. 
 
 
 ### Training new models

@@ -1,14 +1,3 @@
-# Copyright (c) 2018-present, Facebook, Inc.
-# All rights reserved.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
-#
-
-#验证： -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate detected81f.bin
-#训练： -k cpn_ft_h36m_dbb -f 9 -lr 0.00004 -lrd 0.99
-
-
 import numpy as np
 
 from common.arguments import parse_args
@@ -35,12 +24,8 @@ from common.generators import ChunkedGenerator, UnchunkedGenerator
 from time import time
 from common.utils import *
 
-
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0, 1"
-# print(torch.cuda.device_count())
-
 
 ###################
 args = parse_args()

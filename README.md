@@ -5,7 +5,7 @@ The code is developed and tested under the following environment
 * Python 3.8
 * PyTorch 2.3.1
 * CUDA 12.2
-* GPU two RTX3090
+* 2 RTX3090 GPUs
 
 ### Training configurations
 
@@ -13,7 +13,6 @@ The code is developed and tested under the following environment
 |:----------:|:----------:|:----------:|:----------:|
 |Initial learning rate | 2e-4 |  1e-3 |  4e-4 | 
 | Weight decay | 0.98 | 0.99 | 0.98 |
-|Optimizer | AdamW | AdamW | AdamW |
 |Training epochs | 30 |  500|  100|
 |Time per epoch| 3.5h | 3m | 3.5m|
 
@@ -29,7 +28,7 @@ We provide the pre-trained 81-frame model (CPN detected 2D pose as input) [here]
 ```bash
 python run_poseformer.py -k cpn_ft_h36m_dbb -f 81 -c checkpoint --evaluate cpn81f.bin
 ```
-`-f` controls how many frames are used as input. After 5 runs, the 81-frame model achieves achieves 43.0 $\pm$ 0.12 mm (MPJPE) and 31.9 $\pm$ 0.09 mm (P-MPJPE). 
+`-f` controls how many frames are used as input. After 5 runs, the 81-frame model achieves achieves 43.08 $\pm$ 0.08 mm (MPJPE). 
 
 
 We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here](https://pan.baidu.com/s/1iQeJqX8gq0kHpnFKOijatQ?pwd=1234). To evaluate it, put it into the `./checkpoint` directory and run:
@@ -37,7 +36,7 @@ We also provide pre-trained 81-frame model (Ground truth 2D pose as input) [here
 ```bash
 python run_poseformer.py -k gt -f 81 -c checkpoint --evaluate gt81f.bin
 ```
-After 5 runs, the 81-frame model achieves 27.9 $\pm$ 0.04 mm (MPJPE). 
+After 5 runs, the 81-frame model achieves 27.94 $\pm$ 0.05 mm (MPJPE). 
 
 
 ### Training new models

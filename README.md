@@ -19,7 +19,8 @@ The code is developed and tested under the following environment
 
 ### Dataset
 
-Our code is compatible with the dataset setup introduced by [Martinez et al.](https://github.com/una-dinosauria/3d-pose-baseline) and [Pavllo et al.](https://github.com/facebookresearch/VideoPose3D). Please refer to [PoseFormer](https://github.com/zczcwh/PoseFormer) to set up the Human3.6M dataset  (./data directory).  [data](https://pan.baidu.com/s/1uuQ9tJ_ZzUKKrrSvWexg7A?pwd=1234). 
+Our code is compatible with the dataset setup introduced by [Martinez et al.](https://github.com/una-dinosauria/3d-pose-baseline) and [Pavllo et al.](https://github.com/facebookresearch/VideoPose3D). Please refer to [PoseFormer](https://github.com/zczcwh/PoseFormer) to set up the Human3.6M dataset  (`./data` directory). In addition, in order to improve the reproducibility, we directly put the processed datasets into the [datasets](https://pan.baidu.com/s/1uuQ9tJ_ZzUKKrrSvWexg7A?pwd=1234), downloaded directly into the `./data` directory.
+
 
 ### Evaluating pre-trained models
 
